@@ -1,0 +1,30 @@
+
+
+    <section class="container" id="getnotified">
+        <div class="row no-gutters">
+            <div class="col-lg-6 mx-auto">
+                <h1 class="py-5 text-center">Sign up for notifications about our launch date!</h1>
+            </div>
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                <form action="" method="post">
+                    <div class="form-row">
+                        <div class="col-12 col-md-9 mb-2 mbmd-0">
+                            {% csrf_token %}
+                            {% load crispy_forms_tags %}
+                            {{ email_form|crispy }}
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <input type="submit" class="btn btn-block btn-primary" name="action" value="Sign up!">
+                        </div>
+                    </div>
+                    <!-- <div class="form-row">
+                        <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                    </div> -->
+
+                    <!-- <input type="submit" value="Sign up!"> -->
+                </form>
+            </div>
+        </div>
+    <!-- </main> -->
+
+
