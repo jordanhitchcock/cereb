@@ -9,13 +9,13 @@ from .models import Visitors
 
 
 class EmailForm(forms.Form):
-    email = forms.EmailField(label='', widget=forms.TextInput(attrs={'placeholder': 'Enter your email...'}))
+    email = forms.EmailField(label='', widget=forms.TextInput(attrs={'placeholder': 'Enter your email to learn more...'}))
 
 
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=100)
     email = forms.EmailField(label='Your Email')
-    content = forms.CharField(widget=forms.Textarea, required=True)
+    content = forms.CharField(widget=forms.Textarea, label='Tell us about your favorite smart home device!', required=True)
 
 
 def home(request):
@@ -71,7 +71,7 @@ def home(request):
                 try:
                     visitor = Visitors.objects.get(session_id=request.session.session_key)
                 except:
-                    visitor = Visitors(isession_id=session_id, template_name=template_name, visit_dt=datetime.now(),
+                    visitor = Visitors(session_id=session_id, template_name=template_name, visit_dt=datetime.now(),
                            ip=request.META['REMOTE_ADDR'])
 
                 visitor.contact_name = form.cleaned_data['name']

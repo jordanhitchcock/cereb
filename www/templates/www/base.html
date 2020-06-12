@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="#overview">Overview</a>
-            <a class="nav-item nav-link" href="#getnotified">Launch Email List</a>
+            <a class="nav-item nav-link" href="#getnotified">Sign Up</a>
             <a class="nav-item nav-link" href="#team">Team</a>
             <a class="nav-item nav-link" href="#contact">Contact</a>
           </div>
@@ -47,6 +47,48 @@
 
 {% endif %}
 
+<section class="container">
+  <div class="row">
+    <div class="col col-lg-6">
+      <ul>
+        <li>
+          <h3>Access</h3>
+        </li>
+        <li>
+          <h3>Feel</h3>
+        </li>
+        <li>
+          <h3>Audio</h3>
+        </li>
+        <li>
+          <h3>View</h3>
+        </li>
+        <li>
+          <h3>Rest</h3>
+        </li>
+      </ul>
+    </div>
+    <div class="col col-lg-6">
+      <li>
+        <h3>Work</h3>
+      </li>
+      <li>
+        <h3>Sport</h3>
+      </li>
+      <li>
+        <h3>Clean</h3>
+      </li>
+      <li>
+        <h3>Care</h3>
+      </li>
+      <li>
+        <h3>Cook</h3>
+      </li>
+    </ul>
+    </div>
+  </div>
+</section>
+
     {% block content %}
     {% endblock content %}
   
@@ -62,24 +104,24 @@
     <div class="row text-center">
       <div class="col-lg-6 my-auto">
         <h2>
-          Engineering & Privacy
+          Team
         </h2>
         <p>
-          CEREB brings chief engineers from avaition and financial services backgrounds where reliability and security are paramount concerns.
+          CEREB was formed by real estate executives and home service professionals that are passionate about solving the need for a frictionless, one-stop home automation solution. CEREB is backed by a principal in a leading VC specializing in the future of mobility and living spaces.
         </p>
         <p>
-          Together, CEREB has over 15 years of experience in building innovative software products for secure and easy-to-use communications systems
+          CEREB's leadership brings together industry experts from firms that have managed 100,000+ living units, led development in personal transportation and built successful, large-scale home service businesses.
         </p>
       </div>
       <div class="col-lg-6 my-auto">
         <h2>
-          Team
+          Engineering & Privacy
         </h2>
         <p>
-          CEREB was formed by and real estate executives and home service professionals that are passionate about providing a solution saw a need for frictionless, private home automation. CEREB is backed by a principal in a leading VC specializing in the future of mobility and living spaces.
+          CEREB's chief engineers hail from the aviation and financial services industries, where reliability and security are paramount.
         </p>
         <p>
-          The CEREB leadership board brings together industry experts that have managed over 100,000 living units, led development in personal transportation, and built successful home services businesses.
+          CEREB's team has over 15 years of experience in building innovative software products for secure and easy-to-use communications systems.
         </p>
       </div>
     </div>
@@ -103,13 +145,19 @@
                 {{ contact_form|crispy }}
             </div>
             <div class="col col-4" style="width: 50px;"></div>
-                <input type="submit" class="btn btn-block btn-primary" name="action" value="Contact Us">
+                <input type="submit" class="btn btn-block btn-primary mw-15" name="action" value="Contact Us">
             </div>
         </div>
 
     </form>
     </div>
   </Section>
+
+  <footer class="footer">
+    <p class="text-muted">
+      Copyright 2020. All rights reserved.
+    </p>
+  </footer>
 
 <div class="py-5"></div>
 <footer class="footer bg-light mt-auto py-3"></footer>
