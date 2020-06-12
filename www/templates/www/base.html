@@ -47,48 +47,6 @@
 
 {% endif %}
 
-<section class="container">
-  <div class="row">
-    <div class="col col-lg-6">
-      <ul>
-        <li>
-          <h3>Access</h3>
-        </li>
-        <li>
-          <h3>Feel</h3>
-        </li>
-        <li>
-          <h3>Audio</h3>
-        </li>
-        <li>
-          <h3>View</h3>
-        </li>
-        <li>
-          <h3>Rest</h3>
-        </li>
-      </ul>
-    </div>
-    <div class="col col-lg-6">
-      <li>
-        <h3>Work</h3>
-      </li>
-      <li>
-        <h3>Sport</h3>
-      </li>
-      <li>
-        <h3>Clean</h3>
-      </li>
-      <li>
-        <h3>Care</h3>
-      </li>
-      <li>
-        <h3>Cook</h3>
-      </li>
-    </ul>
-    </div>
-  </div>
-</section>
-
     {% block content %}
     {% endblock content %}
   
@@ -136,7 +94,7 @@
         </h1>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center px-2">
       <form action="" method="post">
         <div class="form-row">
             <div class="col-12 col-md-9 mb-2 mbmd-0">
@@ -144,8 +102,8 @@
                 {% load crispy_forms_tags %}
                 {{ contact_form|crispy }}
             </div>
-            <div class="col col-4" style="width: 50px;"></div>
-                <input type="submit" class="btn btn-block btn-primary mw-15" name="action" value="Contact Us">
+            <div class="col"></div>
+                <input type="submit" class="btn btn-block btn-primary form-control w-25" name="action" value="Contact Us">
             </div>
         </div>
 
@@ -153,13 +111,12 @@
     </div>
   </Section>
 
-  <footer class="footer">
+  <footer class="footer my-4 text-center">
     <p class="text-muted">
       Copyright 2020. All rights reserved.
     </p>
   </footer>
 
-<div class="py-5"></div>
 <footer class="footer bg-light mt-auto py-3"></footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

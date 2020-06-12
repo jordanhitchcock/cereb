@@ -23,7 +23,9 @@ html {
 
 }
 
-
+.minw {
+  min-width: 95px;
+}
 
 
 
