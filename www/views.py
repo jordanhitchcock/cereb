@@ -20,7 +20,7 @@ class ContactForm(forms.Form):
 
 def home(request):
 
-    # Create session key if none
+    # Create session key if none:
     if not request.session.session_key:
         request.session.create()
     session_id = request.session.session_key
@@ -51,10 +51,13 @@ def home(request):
                 # update model
                 try:
                     visitor = Visitors.objects.get(session_id=request.session.session_key)
-                    visitor.signup_email = form.cleaned_data['email']
-                    visitor.save()
+
                 except:
-                    pass
+                    visitor = Visitors(session_id=session_id, template_name=template_name, visit_dt=datetime.now(),
+                           ip=request.META['REMOTE_ADDR'])
+
+                visitor.signup_email = form.cleaned_data['email']
+                visitor.save()
 
                 return redirect('home')
 
@@ -67,12 +70,14 @@ def home(request):
                 # update model
                 try:
                     visitor = Visitors.objects.get(session_id=request.session.session_key)
-                    visitor.contact_name = form.cleaned_data['name']
-                    visitor.contact_email = form.cleaned_data['email']
-                    visitor.contact_content = form.cleaned_data['content']
-                    visitor.save()
                 except:
-                    pass
+                    visitor = Visitors(isession_id=session_id, template_name=template_name, visit_dt=datetime.now(),
+                           ip=request.META['REMOTE_ADDR'])
+
+                visitor.contact_name = form.cleaned_data['name']
+                visitor.contact_email = form.cleaned_data['email']
+                visitor.contact_content = form.cleaned_data['content']
+                visitor.save()
 
                 return redirect('home')
 
